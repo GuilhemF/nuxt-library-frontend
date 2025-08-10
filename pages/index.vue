@@ -1,24 +1,26 @@
 <template>
   <main class="w-full" data-namespace="home">
-     <NuxtImg src="/bibliotheque.webp" alt="Image de bibliothèque" class="banner" />           
+     <NuxtImg src="/bibliotheque.webp" alt="Image de bibliothèque" class="banner mb-8" loading="lazy"/>           
             
-    <h1>Home</h1>
+    <h1 class="titre mb-8">Liste des livres</h1>
+    
+    
    <div v-if="pending">
       <p>Chargement des livres en cours...</p>
     </div>
     <div v-else-if="error">
       <p>Une erreur est survenue lors du chargement des livres.</p>
     </div>
-    <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 min-h-screen">
         
         <CardBook
             v-for="livre in livres"
             :key="livre.id"
             :livre="livre"
         />
+      
     </div>
 
-    <h2 style="height:100vh;">lorem</h2>
   </main>
 </template>
 

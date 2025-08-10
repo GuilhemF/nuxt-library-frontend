@@ -1,8 +1,9 @@
 <template>
-    <article class="card-book p-2 rounded-lg border flex flex-col gap-2 items-start">
-        <h2>{{ livre.titre }}</h2>
+    <article class="card-book p-2 rounded-lg flex flex-col gap-4 items-start">
+        <NuxtImg :src="livre.image" :alt="livre.titre" loading="lazy" class="h-[200px]"/>
+        <h2 class="titre">{{ livre.titre }}</h2>
         <p>{{ livre.description }}</p>
-        <NuxtLink :to="`/livre/${livre.id}`" class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed focus:shadow-none text-sm py-1 px-2 shadow-sm hover:shadow-md bg-stone-800 hover:bg-stone-700 border-stone-900 text-stone-50 rounded-lg transition antialiased">Découvrir</NuxtLink>
+        <NuxtLink :to="`/livre/${livre.id}`" class="btn mt-auto">Découvrir</NuxtLink>
     </article>
 </template>
 
@@ -16,4 +17,35 @@ const props = defineProps({
 })
 </script>
 
-
+<style>
+.card-book{
+  border:solid 1px var(--clr-text);
+  position:relative;
+  img{
+    height:200px;
+    object-fit:contain;
+  }
+  h2{
+    font-size:2rem;
+  }
+  p{
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  }
+  a::after{
+    content:"";
+    position:absolute;
+    inset:0;
+  }
+}
+.card-book:hover,
+.card-book:focus{
+  h2{
+    text-decoration:underline;
+  }
+}
+</style>

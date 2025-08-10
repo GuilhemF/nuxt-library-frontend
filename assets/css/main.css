@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Urbanist:ital@0;1&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::view-transition-old(root) {
+  animation-delay: 500ms;
+}
+
+::view-transition-new(root) {
+  animation: circle-in 500ms;
+  /*   animation-timing-function: linear(0, 0.234 11.8%, 0.403 18.4%, 0.624 24.7%, 0.999 33.3%, 0.76 39.9%, 0.705 42.6%, 0.687 45.2%, 0.703 47.7%, 0.753 50.3%, 0.999 57.7%, 0.89 61.8%, 0.865 63.6%, 0.857 65.3%, 0.865 67%, 0.887 68.8%, 0.999 74.5%, 0.957 77.5%, 0.944 80.2%, 0.954 82.7%, 1 88.2%, 0.988 91.9%, 1); */
+}
+
+:root {
+  /* Colors */
+  --clr-black: #0d1b2a;
+  --clr-white: #e0e1dd;
+  --clr-grey: #415a77;
+
+  /* Fonts */
+  --font-titre: "Manrope", sans-serif;
+  --font-texte: "Urbanist", sans-serif;
+
+  @media (prefers-color-scheme: light) {
+    --theme: ☀️;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --theme: 🌑;
+    color-scheme: dark;
+  }
+}
+
+@keyframes move-in {
+  from {
+    translate: 0 -100%;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes circle-in {
+  from {
+    clip-path: circle(0% at 50% 0%);
+  }
+  to {
+    clip-path: circle(120% at 50% 0%);
+  }
+}
+
+body {
+  font-family: var(--font-texte);
+  color-scheme: light;
+  --clr-body: var(--clr-white);
+  --clr-text: var(--clr-black);
+
+  @container style(--theme: 🌑) {
+    color-scheme: dark;
+
+    --clr-body: var(--clr-black);
+    --clr-text: var(--clr-white);
+  }
+}
+
+body {
+  font-family: var(--font-texte);
+  background: var(--clr-body);
+  color: var(--clr-text);
+}
+.titre {
+  font-family: var(--font-titre);
+  font-weight: 400;
+  letter-spacing: -2px;
+  font-size: 2.5rem;
+  line-height: 0.9;
+}
+.btn {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+  border: solid 1px var(--clr-text);
+  background-color: var(--clr-text);
+  color: var(--clr-body);
+  transition: background-color ease 200ms, color ease 200ms;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--clr-body);
+  color: var(--clr-text);
+}
+.btn-big {
+  padding-block: 0.75rem;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns:
+    [gutter-l] 1fr
+    [container] minmax(0, calc(100% - 2rem))
+    [gutter-r] 1fr;
+  grid-template-rows: max-content;
+  gap: 2rem;
+}
+
+#wrapper > * {
+  grid-column: container;
+}
+
+[data-nuxt-img] {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  nav {
+    background-color: var(--clr-body);
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+main {
+  &[data-namespace="home"] {
+    .banner {
+      height: 50dvh;
+    }
+  }
+  &[data-namespace="single-book"] {
+    .content {
+      position: sticky;
+      top: 6rem;
+    }
+  }
+}
