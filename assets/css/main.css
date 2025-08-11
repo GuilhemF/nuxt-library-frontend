@@ -10,7 +10,6 @@
 
 ::view-transition-new(root) {
   animation: circle-in 500ms;
-  /*   animation-timing-function: linear(0, 0.234 11.8%, 0.403 18.4%, 0.624 24.7%, 0.999 33.3%, 0.76 39.9%, 0.705 42.6%, 0.687 45.2%, 0.703 47.7%, 0.753 50.3%, 0.999 57.7%, 0.89 61.8%, 0.865 63.6%, 0.857 65.3%, 0.865 67%, 0.887 68.8%, 0.999 74.5%, 0.957 77.5%, 0.944 80.2%, 0.954 82.7%, 1 88.2%, 0.988 91.9%, 1); */
 }
 
 :root {
@@ -71,6 +70,10 @@ body {
   background: var(--clr-body);
   color: var(--clr-text);
 }
+::selection {
+  background: var(--clr-text);
+  color: var(--clr-body);
+}
 .titre {
   font-family: var(--font-titre);
   font-weight: 400;
@@ -95,6 +98,10 @@ body {
 .btn-big {
   padding-block: 0.75rem;
 }
+.pills {
+  background-color: var(--clr-text);
+  color: var(--clr-body);
+}
 
 #wrapper {
   display: grid;
@@ -118,6 +125,7 @@ body {
 }
 
 header {
+  z-index: 1;
   nav {
     background-color: var(--clr-body);
   }

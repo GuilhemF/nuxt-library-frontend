@@ -5,20 +5,15 @@
     <h1 class="titre mb-8">Liste des livres</h1>
     
     
-   <div v-if="pending">
-      <p>Chargement des livres en cours...</p>
-    </div>
-    <div v-else-if="error">
-      <p>Une erreur est survenue lors du chargement des livres.</p>
-    </div>
+    <p v-if="pending">Chargement des livres en cours...</p>
+    <p v-else-if="error">Une erreur est survenue lors du chargement des livres.</p>
     <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 min-h-screen">
-        
         <CardBook
             v-for="livre in livres"
             :key="livre.id"
             :livre="livre"
-        />
-      
+            @click="navigateToBook(livre.id)"
+        />  
     </div>
 
   </main>
@@ -41,4 +36,15 @@ useHead({
     { name: 'description', content: 'Bienvenue sur la bibliothèque Zecarrossery. Découverte de Nuxt.' }
   ]
 })
+
+const navigateToBook = (id) => {
+  if (!document.startViewTransition) {
+    navigateTo(`/livre/${id}`);
+    return;
+  }
+
+  document.startViewTransition(() => {
+    navigateTo(`/livre/${id}`);
+  });
+};
 </script>

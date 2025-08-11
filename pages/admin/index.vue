@@ -53,7 +53,7 @@ const login = async () => {
 
     token.value = response.token;
     console.log('Connexion réussie, token:', token.value);
-    // Redirect to the admin dashboard or another page
+    // Redirige sur le dashboard admin
     router.push('/admin/dashboard');
 
   } catch (err) {
