@@ -33,15 +33,6 @@
   }
 }
 
-@keyframes move-in {
-  from {
-    translate: 0 -100%;
-  }
-  to {
-    translate: 0 0;
-  }
-}
-
 @keyframes circle-in {
   from {
     clip-path: circle(0% at 50% 0%);

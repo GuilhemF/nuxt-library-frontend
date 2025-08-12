@@ -52,7 +52,7 @@ const login = async () => {
     });
 
     token.value = response.token;
-    console.log('Connexion réussie, token:', token.value);
+    //console.log('Connexion réussie, token:', token.value);
     // Redirige sur le dashboard admin
     router.push('/admin/dashboard');
 

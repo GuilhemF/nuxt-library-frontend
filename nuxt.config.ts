@@ -9,7 +9,19 @@ export default defineNuxtConfig({
   },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
   css: ['~/assets/css/main.css'],
+  // experimental: {
+  //   viewTransition: true
+  // }
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
-  }
+    pageTransition: { 
+      name: 'page', 
+      mode: 'out-in', 
+    }
+  },
+  // router: {
+  //   options: {
+  //     scrollBehaviorType: 'smooth'
+  //   }
+  // },
+ 
 })

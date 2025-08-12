@@ -12,7 +12,6 @@
             v-for="livre in livres"
             :key="livre.id"
             :livre="livre"
-            @click="navigateToBook(livre.id)"
         />  
     </div>
 
@@ -37,14 +36,4 @@ useHead({
   ]
 })
 
-const navigateToBook = (id) => {
-  if (!document.startViewTransition) {
-    navigateTo(`/livre/${id}`);
-    return;
-  }
-
-  document.startViewTransition(() => {
-    navigateTo(`/livre/${id}`);
-  });
-};
 </script>

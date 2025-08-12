@@ -4,6 +4,7 @@
       v-if="livre?.image" 
       :src="livre.image" 
       :alt="`Image de la couverture du livre ${livre.titre}`" class="" 
+       :style="`view-transition-name: book-cover-${livre.id}`"
     />
     <NuxtImg v-else src="/placeholder.webp" alt="Image par défaut" class="" />
 
@@ -22,8 +23,8 @@
 
       <p v-else>Livre non trouvé.</p>
 
-      
-     
+      <NuxtLink to="/" class="underline text-sm">< Retour à la liste</NuxtLink>
+
     </div>
     
   </main>

@@ -17,3 +17,9 @@
   filter: blur(1rem);
 }
 </style>
+
+<script setup>
+definePageMeta({
+   scrollToTop: false
+})
+</script>

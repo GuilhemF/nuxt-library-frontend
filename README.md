@@ -1,75 +1,38 @@
-# Nuxt Minimal Starter
+# Nuxt Library Frontend
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Bienvenue sur le dépôt de notre frontend Nuxt 4. Ce document vous guidera pour lancer le projet en local.
 
-## Setup
+## Installation
 
-Make sure to install dependencies:
+1.  **Clonez le dépôt** :
+
+    ```bash
+    git clone [https://github.com/GuilhemF/nuxt-library-frontend](https://github.com/GuilhemF/nuxt-library-frontend) votre-depot-front
+    cd votre-depot-front
+    ```
+
+2.  **Installez les dépendances Nodes** :
+
+    ```bash
+    npm install
+    ```
+
+3.  **Créer le fichier `.env`** :
+
+    ```bash
+    touch .env
+    ```
+
+4.  **Ajoutez la ligne suivante au fichier `.env` pour spécifier l'URL de votre API backend :** :
+
+    ```bash
+    NUXT_PUBLIC_API_BASE=http://127.0.0.1:8000/api
+    ```
+
+## Lancement du serveur
+
+Pour démarrer, utilisez la commande suivante :
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -8,7 +8,7 @@
    
                         <ul class="mt-4 flex flex-col gap-x-3 gap-y-1.5 lg:mt-0 lg:flex-row lg:items-center">
                         <li>
-                            <NuxtLink to="/" class="font-sans antialiased text-sm text-current flex items-center gap-x-2 p-1 hover:text-primary">
+                            <NuxtLink to="/" class="font-sans antialiased text-sm text-current flex items-center gap-x-2 p-1 hover:text-primary hover:underline">
                             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.0457 24.8187C18.0457 24.2664 18.4934 23.8187 19.0457 23.8187H31.0457C31.5979 23.8187 32.0457 24.2664 32.0457 24.8187V66.8187C32.0457 67.371 31.5979 67.8187 31.0457 67.8187H19.0457C18.4934 67.8187 18.0457 67.371 18.0457 66.8187V24.8187Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M18.0457 31.8168H32.0457" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
@@ -21,10 +21,10 @@
                             </svg>Livres</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/auteur" class="font-sans antialiased text-sm text-current flex items-center gap-x-2 p-1 hover:text-primary"><svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-4 w-4"><path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>Auteurs</NuxtLink>
+                            <NuxtLink to="/auteur" class="font-sans antialiased text-sm text-current flex items-center gap-x-2 p-1 hover:text-primary hover:underline"><svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-4 w-4"><path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>Auteurs</NuxtLink>
                         </li>
                         <li>
-                          <NuxtLink to="/categorie" class="font-sans antialiased text-sm text-current flex items-center gap-x-2 p-1 hover:text-primary">
+                          <NuxtLink to="/categorie" class="font-sans antialiased text-sm text-current flex items-center gap-x-2 p-1 hover:text-primary hover:underline">
                             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M32.9966 23C32.9966 29.6274 27.624 35 20.9966 35C14.3692 35 8.99658 29.6274 8.99658 23C8.99658 16.3726 14.3692 11 20.9966 11C27.624 11 32.9966 16.3726 32.9966 23Z" stroke="#C2CCDE" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M47.097 13.1724L66.896 32.9713" stroke="#C2CCDE" stroke-linecap="round" stroke-linejoin="round" />

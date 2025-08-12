@@ -1,9 +1,12 @@
 <template>
     <article class="card-book p-2 rounded-lg flex flex-col gap-4 items-start">
         <NuxtImg 
+          v-if="livre?.image" 
           :src="livre.image" :alt="livre.titre" 
           loading="lazy" class="h-[200px]"
+           :style="`view-transition-name: book-cover-${livre.id}`"
         />
+        <NuxtImg v-else src="/placeholder.webp" alt="Image par défaut" class="h-[200px]" />
 
         <ul v-if="livre.categories && livre.categories.length > 0" class="flex gap-2">
           <li v-for="cat in livre.categories" :key="cat.id" class="text-xs px-2 py-1 rounded-full pills">
@@ -16,7 +19,12 @@
         
         <p>{{ livre.description }}</p>
 
-        <NuxtLink :to="`/livre/${livre.id}`" class="btn btn-big mt-auto">Découvrir</NuxtLink>
+        <NuxtLink 
+          :to="`/livre/${livre.id}`" 
+          class="btn btn-big mt-auto" 
+        >
+          Découvrir
+        </NuxtLink>
         
     </article>
 </template>
