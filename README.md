@@ -11,7 +11,7 @@ Node v22.12.0
 1.  **Clonez le dépôt** :
 
     ```bash
-    git clone [https://github.com/GuilhemF/nuxt-library-frontend](https://github.com/GuilhemF/nuxt-library-frontend) votre-depot-front
+    git clone https://github.com/GuilhemF/nuxt-library-frontend votre-depot-front
     cd votre-depot-front
     ```
 
