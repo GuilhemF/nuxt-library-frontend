@@ -6,7 +6,7 @@
                     <NuxtLink to="/" class="titre logo px-1">Bibliothèque</NuxtLink>
                     <hr class="ml-1 mr-1.5 hidden h-5 w-px border-l border-t-0 border-secondary-dark lg:block" />
    
-                        <ul class="mt-4 flex flex-col gap-x-3 gap-y-1.5 lg:mt-0 lg:flex-row lg:items-center">
+                        <ul class="mt-4 flex gap-x-3 gap-y-1.5 lg:mt-0 flex-row items-center">
                         <li>
                             <NuxtLink to="/" class="font-sans antialiased text-sm text-current flex items-center gap-x-2 p-1 hover:text-primary hover:underline">
                             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,13 +41,10 @@
                     
                     <div class="ml-auto flex gap-2">
                         ☀️
-                        <input type="checkbox" class="appearance-none relative inline-block rounded-full w-12 h-6 cursor-pointer before:inline-block before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-stone-200 before:transition-colors before:duration-200 before:ease-in after:absolute after:top-2/4 after:left-0 after:-translate-y-2/4 after:w-6 after:h-6 after:border after:border-stone-200 after:bg-white after:rounded-full checked:after:translate-x-full after:transition-all after:duration-200 after:ease-in disabled:opacity-50 disabled:cursor-not-allowed dark:after:bg-white checked:before:bg-stone-800 checked:after:border-stone-800 ml-auto" id="theme-switcher" />
+                        <input type="checkbox" class="appearance-none relative inline-block rounded-full w-12 h-6 cursor-pointer before:inline-block before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-stone-200 before:transition-colors before:duration-200 before:ease-in after:absolute after:top-2/4 after:left-0 after:-translate-y-2/4 after:w-6 after:h-6 after:border after:border-stone-200 after:bg-white after:rounded-full checked:after:translate-x-full after:transition-all after:duration-200 after:ease-in disabled:opacity-50 disabled:cursor-not-allowed dark:after:bg-white checked:before:bg-stone-800 checked:after:border-stone-800 ml-auto" id="theme-switcher" aria-label="Theme switcher"/>
                         🌑
                     </div>
-                    
 
-                
-                
                 </div>
             </nav>
             
@@ -66,9 +63,11 @@ onMounted(() => {
 
   function updateTheme(isDark) {
     if (isDark) {
-      document.documentElement.style.setProperty('--theme', '🌑');
+      //document.documentElement.style.setProperty('--theme', '🌑');
+      document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-      document.documentElement.style.setProperty('--theme', '☀️');
+      //document.documentElement.style.setProperty('--theme', '☀️');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   }
 

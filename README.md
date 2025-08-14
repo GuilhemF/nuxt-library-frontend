@@ -1,6 +1,10 @@
 # Nuxt Library Frontend
 
-Bienvenue sur le dépôt de notre frontend Nuxt 4. Ce document vous guidera pour lancer le projet en local.
+Bienvenue sur le dépôt de notre frontend [Nuxt 4](https://nuxt.com/) avec Tailwind. Ce document vous guidera pour lancer le projet en local.
+
+## Prérequis
+
+Node v22.12.0
 
 ## Installation
 

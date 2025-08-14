@@ -42,7 +42,7 @@
   }
 }
 
-body {
+/* body {
   font-family: var(--font-texte);
   color-scheme: light;
   --clr-body: var(--clr-white);
@@ -54,6 +54,16 @@ body {
     --clr-body: var(--clr-black);
     --clr-text: var(--clr-white);
   }
+} */
+html[data-theme="dark"] body {
+  color-scheme: dark;
+  --clr-body: var(--clr-black);
+  --clr-text: var(--clr-white);
+}
+html[data-theme="light"] body {
+  color-scheme: light;
+  --clr-body: var(--clr-white);
+  --clr-text: var(--clr-black);
 }
 
 body {
